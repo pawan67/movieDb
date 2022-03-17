@@ -5,8 +5,10 @@ export const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 4000,
+  lazyLoad: true,
 };
 export const settings1 = {
+  lazyLoad: true,
   autoplay: true,
 
   autoplaySpeed: 3000,
