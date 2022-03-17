@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/dist/client/router";
 const Header = () => {
   const { theme, setTheme } = useTheme();
-
+  const [searchTerm, setSearchTerm] = useState("");
+  console.log(searchTerm);
   const router = useRouter();
+
   return (
     <>
       <div className="navbar bg-base-200 mb-10  fixed top-0 z-50  ">
@@ -13,10 +15,12 @@ const Header = () => {
             onClick={() => router.push("/")}
             className="flex-1   px-2 lg:flex-none"
           >
-            <a className="text-lg font-bold btn btn-ghost rounded-btn">MovieDB</a>
+            <a className="text-lg font-bold btn btn-ghost rounded-btn">
+              MovieDB
+            </a>
           </div>
           <div className="flex justify-end flex-1 px-2">
-            <div className="flex items-stretch">
+            <div className="flex space-x-2 items-stretch">
               <div className="dropdown dropdown-end">
                 <label htmlFor="my-modal-4" className="btn modal-button">
                   Search
@@ -62,11 +66,24 @@ const Header = () => {
         <label className="modal-box relative " htmlFor="">
           <form className="flex space-x-5 justify-between">
             <input
+              onChange={(e) => setSearchTerm(e.target.value)}
               type="text"
               placeholder="Search movies and shows 🔍"
               className="input input-bordered w-full "
             />
-            <button className="btn btn-primary">Search</button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                if (searchTerm !== "") {
+                  router.push(`/search/${searchTerm}`);
+                } else {
+                  alert("Don't leave blank ");
+                }
+              }}
+              className="btn btn-primary"
+            >
+              Search
+            </button>
           </form>
         </label>
       </label>

@@ -11,6 +11,7 @@ const BannerCard = ({ res }) => {
         <div className="hero-content flex-col lg:flex-row">
           <div >
             <Image
+            className=" rounded-md"
               width={340}
               height={500}
               src={`${BASEIMAGEURL}${res.poster_path}`}

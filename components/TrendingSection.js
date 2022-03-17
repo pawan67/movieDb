@@ -13,10 +13,8 @@ const TrendingSection = () => {
   console.log(data);
 
   return (
-    <div className="px-5 mt-5 ">
-      <h1 className=" mb-5 text-2xl md:text-3xl font-semibold">
-        Trending today
-      </h1>
+    <div className="px-5 mt-20 ">
+      <h1 className=" mb-5   text-2xl md:text-3xl font-semibold">Trending today</h1>
       {data != undefined || null ? (
         <>
           <Slider {...settings}>

@@ -1,6 +1,7 @@
 import React from "react";
 import { BASEIMAGEURL } from "../common/apis/tmdbApiKey";
 import { AiFillStar } from "react-icons/ai";
+import Image from "next/dist/client/image";
 const DetailComponent = ({ data }) => {
   console.log(data);
   return (
@@ -36,8 +37,10 @@ const DetailComponent = ({ data }) => {
           </div>
           <div className=" md:flex md:space-x-10 mt-10">
             <div>
-              <img
-                className="  sm:max-w-sm "
+              <Image
+                height={700}
+                width={500}
+                className=" rounded-md "
                 src={`${BASEIMAGEURL}${
                   data.status === 200 && data.data.poster_path
                 }`}
