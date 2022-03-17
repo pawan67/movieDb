@@ -5,7 +5,7 @@ const DetailComponent = ({ data }) => {
   console.log(data);
   return (
     <div>
-      <div class=" mt-20 min-h-screen   bg-base-200">
+      <div className=" mt-20 min-h-screen   bg-base-200">
         <div className="p-5 md:p-10">
           <div className=" flex justify-between ">
             <div>
@@ -48,7 +48,7 @@ const DetailComponent = ({ data }) => {
               <div className=" mt-5 md:mt-10 flex flex-wrap justify-start   gap-3  md:space-x-3">
                 {data.status === 200 &&
                   data.data.genres.map((res) => (
-                    <button key={res.id} class=" font-semibold">
+                    <button key={res.id} className=" font-semibold">
                       {res.name}
                     </button>
                   ))}

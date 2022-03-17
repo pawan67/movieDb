@@ -18,7 +18,7 @@ export default function Detail() {
   console.log(Id);
   useEffect(() => {
     dispatch(fetchAsyncTrending());
-  }, []);
+  }, [dispatch]);
 
   const trending = useSelector(getTrending);
   useEffect(() => {
@@ -37,16 +37,16 @@ export default function Detail() {
       <div>
         <Header />
         <div className=" mt-20  sm:p-0 container mx-auto">
-          <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col lg:flex-row-reverse">
               <img
                 src={`${BASEIMAGEURL}${realData.poster_path}`}
-                class="max-w-sm rounded-lg shadow-2xl"
+                className="max-w-sm rounded-lg shadow-2xl"
               />
               <div>
-                <h1 class="text-5xl font-bold">{realData.title}</h1>
-                <p class="py-6">{realData.overview}</p>
-                <button class="btn btn-primary">Get Started</button>
+                <h1 className="text-5xl font-bold">{realData.title}</h1>
+                <p className="py-6">{realData.overview}</p>
+                <button className="btn btn-primary">Get Started</button>
               </div>
             </div>
           </div>

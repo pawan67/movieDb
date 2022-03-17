@@ -21,13 +21,13 @@ const TrendingSection = () => {
         <>
           <Slider {...settings}>
             {data.slice(1, 5).map((res) => (
-              <BannerCard res={res} />
+              <BannerCard key={res.id} res={res} />
             ))}
           </Slider>
           <div className=" my-5 text-3xl font-semibold">Trending this week</div>
           <Slider {...settings1}>
             {data.slice(4, 20).map((res) => (
-              <Card res={res} />
+              <Card key={res.id} res={res} />
             ))}
           </Slider>
         </>
