@@ -18,7 +18,7 @@ const Header = () => {
           <div className="flex justify-end flex-1 px-2">
             <div className="flex items-stretch">
               <div className="dropdown dropdown-end">
-                <label for="my-modal-4" className="btn modal-button">
+                <label htmlFor="my-modal-4" className="btn modal-button">
                   Search
                 </label>
                 <ul
@@ -59,7 +59,7 @@ const Header = () => {
       </div>
       <input type="checkbox" id="my-modal-4" className="modal-toggle" />
       <label htmlFor="my-modal-4" className="modal cursor-pointer">
-        <label className="modal-box relative " for="">
+        <label className="modal-box relative " htmlFor="">
           <form className="flex space-x-5 justify-between">
             <input
               type="text"
