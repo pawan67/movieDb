@@ -3,7 +3,7 @@ import { BsTwitter, BsGithub, BsLinkedin, BsInstagram } from "react-icons/bs";
 const Footer = () => {
   return (
     <div>
-      <footer className=" mt-10 footer footer-center p-10 bg-base-200 text-base-content rounded">
+      <footer className="  mt-10 footer footer-center p-10 bg-base-200 text-base-content rounded">
         <div className=" text-xl">
           <div className="grid grid-flow-col gap-4">
             <a href="https://twitter.com/Pawantamada21">
