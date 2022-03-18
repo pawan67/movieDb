@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Head from "next/head";
@@ -10,18 +10,25 @@ import {
 } from "../features/data/movieSlice";
 import { useDispatch, useSelector } from "react-redux";
 import DetailComponent from "../components/DetailComponent";
+import { APIkey } from "../common/apis/tmdbApiKey";
 
 const DetailsInfo = () => {
   const router = useRouter();
   const tmdbId = router.query.tmdbId;
+  const [data, setData] = useState({});
   console.log(tmdbId);
-  const data = useSelector(getSelectedMovieOrShow);
-  const dispatch = useDispatch();
-  console.log(data);
+
   useEffect(() => {
-    dispatch(fetchAsyncMoviesOrShowsDetail(tmdbId));
+    axios
+      .get(
+        `https://api.themoviedb.org/3/movie/${tmdbId}?api_key=${APIkey}&language=en-US`
+      )
+      .then((response) => {
+        console.log(response);
+        setData(response);
+      });
   }, [tmdbId]);
-  console.log(data);
+
   if (data.status !== 200) {
     return (
       <>

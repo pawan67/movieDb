@@ -21,7 +21,6 @@ export const fetchAsyncMoviesOrShowsDetail = createAsyncThunk(
   }
 );
 
-
 const initialState = {
   trending: {},
   selectedMovieOrShow: {},
@@ -47,7 +46,7 @@ const movieSlice = createSlice({
     [fetchAsyncMoviesOrShowsDetail.fulfilled]: (state, { payload }) => {
       console.log("Fetched succesfully");
       return { ...state, selectedMovieOrShow: payload };
-    }, 
+    },
   },
 });
 
