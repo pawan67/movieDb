@@ -27,7 +27,7 @@ const Search = () => {
         <Header />
         <div className=" h-screen w-screen flex justify-center items-center">
           <div>
-            <button class="btn loading">loading</button>
+            <button className="btn loading">loading</button>
           </div>
         </div>
       </>
