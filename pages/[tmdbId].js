@@ -22,6 +22,18 @@ const DetailsInfo = () => {
     dispatch(fetchAsyncMoviesOrShowsDetail(tmdbId));
   }, [tmdbId]);
   console.log(data);
+  if (data.status !== 200) {
+    return (
+      <>
+        <Header />
+        <div className=" h-screen w-screen flex justify-center items-center">
+          <div>
+            <button class="btn loading">loading</button>
+          </div>
+        </div>
+      </>
+    );
+  }
   return (
     <>
       <Head>

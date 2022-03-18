@@ -14,6 +14,7 @@ const BannerCard = ({ res }) => {
               blurDataURL="https://ak.picdn.net/shutterstock/videos/1054933562/thumb/7.jpg"
               className=" rounded-md"
               width={340}
+              layout="intrinsic"
               height={500}
               src={`${BASEIMAGEURL}${res.poster_path}`}
             />

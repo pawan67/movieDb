@@ -20,7 +20,19 @@ const Search = () => {
         console.log(response);
         setData(response);
       });
-  }, [SearchTerm]);
+  }, []);
+  if (data.status !== 200) {
+    return (
+      <>
+        <Header />
+        <div className=" h-screen w-screen flex justify-center items-center">
+          <div>
+            <button class="btn loading">loading</button>
+          </div>
+        </div>
+      </>
+    );
+  }
   return (
     <>
       <Head>

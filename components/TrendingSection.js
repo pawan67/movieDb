@@ -11,7 +11,17 @@ const TrendingSection = () => {
   const trending = useSelector(getTrending);
   const data = trending.results;
   console.log(data);
-
+  if (!data) {
+    return (
+      <div>
+        <div className=" h-screen w-screen flex justify-center items-center">
+          <div>
+            <button class="btn loading">loading</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="px-5 mt-20 overflow-y-hidden overflow-x-hidden ">
       <h1 className=" mb-5   text-2xl md:text-3xl font-semibold">Trending</h1>

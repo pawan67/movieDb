@@ -17,15 +17,17 @@ const Header = () => {
             onClick={() => router.push("/")}
             className="flex-1   px-2 lg:flex-none"
           >
-            <a className="text-lg font-bold btn btn-ghost rounded-btn">
+            <a className="text-lg space-x-2 font-bold btn btn-ghost rounded-btn">
+              <img className=" mr-2 w-10" src="/favicon.ico" alt="" />
               MovieDB
             </a>
           </div>
           <div className="flex justify-end flex-1 px-2">
             <div className="flex space-x-2 items-stretch">
               <div className="dropdown dropdown-end">
-                <label htmlFor="my-modal-4" className=" btn modal-button ">
+                <label htmlFor="my-modal-4" className=" btn   rounded-full ">
                   <FiSearch className=" text-xl" />
+                  <p className=" hidden sm:block ml-2">Search</p>
                 </label>
                 <ul
                   tabIndex="0"

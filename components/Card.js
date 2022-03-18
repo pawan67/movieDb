@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Image from "next/dist/client/image";
 const Card = ({ res }) => {
   const router = useRouter();
-  console.log(res);
+
   return (
     <div>
       <div>
