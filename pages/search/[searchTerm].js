@@ -36,8 +36,8 @@ const Search = () => {
               <img className=" w-[350px]" src="/nodata.svg" alt="" />
             </div>
             <div className="  font-medium px-5 mt-20">
-              There are no results for '{SearchTerm}' are you sure you searched
-              for the right movie?
+              There are no results for &apos;{SearchTerm}&apos; are you sure you
+              searched for the right movie?
             </div>
           </div>
           <Footer />
