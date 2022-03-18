@@ -23,7 +23,7 @@ export default function Home() {
       </Head>
       <div>
         <Header />
-        <div className="  sm:p-0 container mx-auto">
+        <div className=" overflow-x-hidden  sm:p-0 container mx-auto">
           <TrendingSection />
         </div>
         <Footer />

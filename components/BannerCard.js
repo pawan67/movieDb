@@ -9,9 +9,10 @@ const BannerCard = ({ res }) => {
     <div>
       <div className="hero rounded-md  bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <div >
+          <div>
             <Image
-            className=" rounded-md"
+              blurDataURL="https://ak.picdn.net/shutterstock/videos/1054933562/thumb/7.jpg"
+              className=" rounded-md"
               width={340}
               height={500}
               src={`${BASEIMAGEURL}${res.poster_path}`}

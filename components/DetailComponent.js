@@ -38,6 +38,7 @@ const DetailComponent = ({ data }) => {
           <div className=" md:flex md:space-x-10 mt-10">
             <div>
               <Image
+                blurDataURL="https://ak.picdn.net/shutterstock/videos/1054933562/thumb/7.jpg"
                 height={700}
                 width={500}
                 className=" rounded-md "
@@ -71,10 +72,22 @@ const DetailComponent = ({ data }) => {
                     </div>
                   </div>
                 </div>
-                <div className=" sm:w-auto btn btn-primary w-full mt-5 ">
-                  <a href={data.status === 200 && data.data.homepage}>
-                    Watch now
-                  </a>
+                <div className=" md:space-x-5">
+                  <div className=" sm:w-auto btn btn-primary w-full mt-5 ">
+                    <a href={data.status === 200 && data.data.homepage}>
+                      Watch now
+                    </a>
+                  </div>
+                  <div className=" sm:w-auto btn btn-primary w-full mt-5 ">
+                    <a
+                      href={
+                        data.status === 200 &&
+                        `https://www.imdb.com/title/${data.data.imdb_id}`
+                      }
+                    >
+                      Imdb page
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

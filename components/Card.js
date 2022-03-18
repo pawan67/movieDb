@@ -11,6 +11,7 @@ const Card = ({ res }) => {
         <div className="  mt-5 card card-compact w-80 mx-auto sm:w-80 bg-base-200 shadow-xl">
           <figure>
             <Image
+              blurDataURL="https://ak.picdn.net/shutterstock/videos/1054933562/thumb/7.jpg"
               width={350}
               height={200}
               src={`${BASEIMAGEURL}${res.backdrop_path}`}

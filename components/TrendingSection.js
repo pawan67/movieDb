@@ -13,8 +13,8 @@ const TrendingSection = () => {
   console.log(data);
 
   return (
-    <div className="px-5 mt-20 ">
-      <h1 className=" mb-5   text-2xl md:text-3xl font-semibold">Trending today</h1>
+    <div className="px-5 mt-20 overflow-y-hidden overflow-x-hidden ">
+      <h1 className=" mb-5   text-2xl md:text-3xl font-semibold">Trending</h1>
       {data != undefined || null ? (
         <>
           <Slider {...settings}>
@@ -22,9 +22,15 @@ const TrendingSection = () => {
               <BannerCard key={res.id} res={res} />
             ))}
           </Slider>
+          <div className=" my-5 text-3xl font-semibold">Trending today</div>
+          <Slider {...settings1}>
+            {data.slice(4, 13).map((res) => (
+              <Card key={res.id} res={res} />
+            ))}
+          </Slider>
           <div className=" my-5 text-3xl font-semibold">Trending this week</div>
           <Slider {...settings1}>
-            {data.slice(4, 20).map((res) => (
+            {data.slice(13, 20).map((res) => (
               <Card key={res.id} res={res} />
             ))}
           </Slider>

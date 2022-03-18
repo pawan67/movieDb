@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/dist/client/router";
+
+import { FiSearch } from "react-icons/fi";
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const [searchTerm, setSearchTerm] = useState("");
@@ -22,8 +24,8 @@ const Header = () => {
           <div className="flex justify-end flex-1 px-2">
             <div className="flex space-x-2 items-stretch">
               <div className="dropdown dropdown-end">
-                <label htmlFor="my-modal-4" className="btn modal-button">
-                  Search
+                <label htmlFor="my-modal-4" className=" btn modal-button ">
+                  <FiSearch className=" text-xl" />
                 </label>
                 <ul
                   tabIndex="0"
@@ -45,15 +47,15 @@ const Header = () => {
                   tabIndex="0"
                   className="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
                 >
-                  <li onClick={() => setTheme("luxury")}>
-                    <a>IMDB Theme</a>
+                  <li onClick={() => setTheme("business")}>
+                    <a>Dark 🌑</a>
                   </li>
 
                   <li onClick={() => setTheme("black")}>
-                    <a>Amoled Black</a>
+                    <a>Pitch Black 🖤</a>
                   </li>
-                  <li onClick={() => setTheme("light")}>
-                    <a>Light💡💥</a>
+                  <li onClick={() => setTheme("wireframe")}>
+                    <a>Light💡</a>
                   </li>
                 </ul>
               </div>
