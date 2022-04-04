@@ -19,7 +19,7 @@ const BannerCard = ({ res }) => {
               src={`${BASEIMAGEURL}${res.poster_path}`}
             />
           </div>
-          <div className=" md:ml-5">
+          <div className=" max-w-4xl md:ml-5">
             <h1 className=" text-2xl line-clamp-1 sm:text-5xl font-bold">
               {res.title}
             </h1>
